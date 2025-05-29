@@ -1,235 +1,304 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f0f4f8;
-  }
-  
-  header {
-    background-color: #1e3a8a;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-  }
-  
-  .hero {
-    background-color: #3b82f6;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .hero h1 {
-    margin-bottom: 10px;
-  }
+/* Global Settings */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
 
-  .hero {
-    background-color: #1e3a8a;
-    color: white;
-    padding: 60px 20px;
-  }
-  
-  .hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-  
-  .hero-text {
-    flex: 1 1 500px;
-  }
-  
-  .hero-text h1 {
-    font-size: 2.8em;
-    margin-bottom: 20px;
-  }
-  
-  .hero-text p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    line-height: 1.5;
-  }
-  
-  .hero-btn {
-    background-color: #10b981;
-    color: white;
-    padding: 12px 28px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background 0.3s ease;
-  }
-  
-  .hero-btn:hover {
-    background-color: #059669;
-  }
-  
-  .hero-image {
-    flex: 1 1 400px;
-    text-align: center;
-  }
-  
-  .hero-image img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  
-  .container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-  }
-  
-  .section-title {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  .card {
-    background-color: #e0f2fe;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .card h3 {
-    margin-top: 0;
-  }
-  
-  .card p {
-    margin-bottom: 15px;
-  }
-  
-  .card a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #2563eb;
-    color: white;
-    border-radius: 5px;
-  }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f8;
+  color: #1e293b;
+}
 
-  .tentang {
-    background-color: #f1f5f9;
-    padding: 60px 20px;
-    text-align: center;
-    color: #1e293b;
-  }
-  
-  .tentang h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
+/* Header */
+.main-header {
+  background-color: #1e3a8a;
+  color: #1e3a8a;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-  .tentang p {
-    max-width: 700px;
-    margin: 0 auto 30px;
-    line-height: 1.6;
-  }
-  
-  .sosial-link {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  
-  .sosial-link a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #e2e8f0;
-    padding: 10px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #1e293b;
-    font-weight: 500;
-    transition: background 0.2s ease;
-  }
-  
-  .sosial-link a:hover {
-    background-color: #cbd5e1;
-  }
-  
-  .sosial-link img {
-    width: 20px;
-    height: 20px;
-  }
-  
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  footer {
-    background-color: #1e3a8a;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-  }
-  
-  /* Scrollable eksperimen */
+.logo-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.site-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Navigation */
+.main-nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav a {
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #cbd5e1;
+}
+
+/* Beranda Section */
+.beranda {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.beranda-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.beranda-text {
+  flex: 1 1 500px;
+}
+
+.beranda-text h1 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+}
+
+.beranda-text p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.beranda-btn {
+  background-color: #10b981;
+  color: white;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.beranda-btn:hover {
+  background-color: #059669;
+}
+
+.beranda-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.beranda-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container Utility */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+/* Eksoerimen Section */
+#eksperimen {
+  scroll-margin-top: 200px; /* sesuaikan tinggi header */
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  background-color: #e0f2fe;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  margin-bottom: 15px;
+}
+
+.card a {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Scrollable Track */
 .scroll-wrapper {
-    overflow-x: auto;
-    padding-bottom: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.card-track {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 10px;
+  min-width: 100%;
+}
+
+.card-track .card {
+  min-width: 250px;
+  flex-shrink: 0;
+}
+
+/* Tambah Eksperimen */
+.tambah-eksperimen {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.tambah-eksperimen a {
+  background-color: #10b981;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.tambah-eksperimen a:hover {
+  background-color: #059669;
+}
+
+/* Tentang */
+.tentang {
+  background-color: #f1f5f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.tentang h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.tentang p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* Sosial Media */
+.sosial-link {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.sosial-link a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #e2e8f0;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.sosial-link a:hover {
+  background-color: #cbd5e1;
+}
+
+.sosial-link img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .card-track {
-    display: flex;
-    gap: 20px;
-    padding-bottom: 10px;
-    min-width: 100%;
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
   }
-  
-  .card-track .card {
-    min-width: 250px;
-    flex-shrink: 0;
-  }
-  
-  /* Tombol Tambah Eksperimen */
-  .tambah-eksperimen {
+
+  .hero-container {
     text-align: center;
-    margin-top: 20px;
-  }
-  
-  .tambah-eksperimen a {
-    background-color: #10b981;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.2s ease;
-  }
-  
-  .tambah-eksperimen a:hover {
-    background-color: #059669;
+    flex-direction: column;
   }
 
-
-  
+  .hero-text, .hero-image {
+    flex: 1 1 100%;
+  }
+}
