@@ -4,33 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Phyezics</title>
+  <link rel="icon" href="LOGO-PHYEZICS.png"/>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Phyezics</h1>
-    <nav>
-      <a href="#">Beranda</a>
-      <a href="#eksperimen">Eksperimen</a>
-      <a href="#tentang">Tentang</a>
+<header class="main-header">
+  <div class="container header-content">
+    <div class="logo-name">
+      <img src="LOGO-PHYEZICS.png" alt="Logo Phyezics" class="logo" />
+      <span class="site-name">Phyezics</span>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#eksperimen">Eksperimen</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+      </ul>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <section class="hero">
-    <div class="hero-container">
-      <div class="hero-text">
+  <section class="beranda" id="beranda">
+    <div class="beranda-container">
+      <div class="beranda-text">
         <h1>Phyezics: Eksperimen Fisika untuk Semua Model Pembelajaran</h1>
         <p>Platform digital yang menyediakan panduan lengkap eksperimen fisika secara interaktif dan mudah dipahami, terintegrasi dengan berbagai model pembelajaran seperti inkuiri, berbasis proyek, hingga STEM.</p>
-        <a href="#eksperimen" class="hero-btn">Mulai Sekarang</a>
+        <a href="#eksperimen" class="beranda-btn">Mulai Sekarang</a>
       </div>
-      <div class="hero-image">
+      <div class="beranda-image">
         <img src="hero-illustration.png" alt="Ilustrasi eksperimen" />
       </div>
     </div>
   </section>
 
-  
 
   <div class="container" id="eksperimen">
     <h2 class="section-title">Eksperimen Tersedia</h2>
@@ -84,7 +91,7 @@
         <a href="https://youtube.com/@namamu" target="_blank">
           <img src="icons/youtube.svg" alt="YouTube" /> YouTube
         </a>
-        <a href="mailto:kontak@hcp.lab-fisika.id">
+        <a href="mailto:">
           <img src="icons/email.svg" alt="Email" /> Email Kami
         </a>
       </div>
