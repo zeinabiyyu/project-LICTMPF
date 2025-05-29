@@ -15,6 +15,12 @@ body {
   color: #1e293b;
 }
 
+section {
+  scroll-margin-top: 200px; /* sesuaikan dengan tinggi navbar */
+}
+#beranda {
+  scroll-margin-top: 100px; /* sesuaikan dengan tinggi navbar */
+}
 /* Header */
 .main-header {
   background-color: #1e3a8a;
@@ -75,7 +81,7 @@ body {
 .beranda {
   background-color: #1e3a8a;
   color: white;
-  padding: 60px 20px;
+  padding: 0px 20px;
   text-align: center;
 }
 
@@ -136,10 +142,6 @@ body {
   padding: 20px;
   background-color: white;
   border-radius: 8px;
-}
-/* Eksoerimen Section */
-#eksperimen {
-  scroll-margin-top: 200px; /* sesuaikan tinggi header */
 }
 
 /* Section Title */
