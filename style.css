@@ -319,14 +319,6 @@ footer {
   position: relative;
 }
 
-.section-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: #3498db;
-  margin: 15px auto;
-}
 
 .developers-container {
   max-width: 800px;
