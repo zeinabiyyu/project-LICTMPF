@@ -1,7 +1,7 @@
 /* Reset and base styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
     background-color: #f9fafb;
     color: #1f2937;
@@ -29,8 +29,8 @@ body {
   .experiment-header p {
     font-size: 1.2em;
   }
-
-  /* Resources */
+  
+    /* Resources */
   .experiment-resources {
     background-color: #f1f5f9;
     padding: 10px 0px;
@@ -51,75 +51,101 @@ body {
   .resource-button:hover {
     background-color: #2563eb;
   }
-  
-  /* Curriculum section */
-  .curriculum-cards {
-    background-color: #f9fafb;
-    padding: 40px 20px;
-  }
-  
-  .curriculum-cards h2 {
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #1e3a8a;
-  }
-  
-  .card-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .card {
+
+
+  /* Curriculum section BARU */
+  .kurikulum-section {
+    max-width: 800px;
+    margin: auto;
     background-color: #ffffff;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    border-left: 6px solid #2563eb;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   }
-  
-  .card h3 {
-    margin: 0 0 10px;
-    color: #1e40af;
+
+  .kurikulum-section h2 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 30px;
   }
-  
-  .card p {
-    margin: 0 0 15px;
-    color: #374151;
+
+  .kurikulum-item {
+    margin-bottom: 16px;
   }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 16px;
+
+  .accordion-btn {
+    width: 100%;
     background-color: #2563eb;
     color: white;
-    text-decoration: none;
-    border-radius: 8px;
+    padding: 12px 16px;
+    border: none;
     font-weight: bold;
+    text-align: left;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     transition: background-color 0.3s ease;
   }
-  
-  .btn:hover {
+
+  .accordion-btn:hover {
     background-color: #1d4ed8;
   }
-  
 
-  
-  /* Responsive design */
-  @media (max-width: 600px) {
-    .experiment-header h1 {
-      font-size: 2em;
-    }
-  
-    .experiment-curriculum h2 {
-      font-size: 1.5em;
-    }
-  
-    .curriculum-list h3 {
-      font-size: 1.2em;
-    }
+  .accordion-btn .arrow {
+    transition: transform 0.3s ease;
   }
+
+  .accordion-btn.active .arrow {
+    transform: rotate(180deg); /* Panah berputar saat aktif */
+  }
+
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    background: #f9fafb;
+    padding: 0 20px;
+    border-left: 4px solid #2563eb;
+    border-radius: 0 0 4px 4px;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+  }
+
+  .content.open {
+    padding: 15px 20px;
+    max-height: 1000px; /* Sesuaikan sesuai kebutuhan isi */
+  }
+
+  /* Tabel pengamatan */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  table, th, td {
+    border: 1px solid #999;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: center;
+  }
+
+  /* Tambahan kecil */
+  sup {
+    vertical-align: super;
+    font-size: smaller;
+  }
+
+  code {
+    background-color: #e5e7eb;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: monospace;
+  }
+
+
 
   /* Video section */
 .experiment-video {
