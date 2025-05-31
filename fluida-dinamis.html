@@ -15,116 +15,177 @@
     </div>
   </header>
 
+  <section class="kurikulum-section">
+    <h2>Kurikulum Eksperimen Fluida Dinamis</h2>
+
+    <div class="kurikulum-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this, 'orientasi')">
+        <h3><span>Orientasi dan Tujuan</span></h3>
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div id="orientasi" class="content">
+        <h3>Latar Belakang</h3>
+          <p>Hukum Torricelli menjelaskan hubungan antara kecepatan aliran fluida yang keluar dari lubang pada tangki dengan ketinggian fluida di atas lubang. Rumus dasarnya:</p>
+          <div class="formula">v = √(2gh)</div>
+          <p>Dengan:</p>
+          <ul>
+              <li><span>v</span>: kecepatan aliran (m/s),</li>
+              <li><span>g</span>: percepatan gravitasi (9,8 m/s²),</li>
+              <li><span>h</span>: tinggi fluida (m).</li>
+          </ul>
+        <h3>Tujuan</h3>
+          <ol type="a">
+            <li>Memverifikasi Hukum Torricelli melalui simulasi.</li>
+            <li>Menganalisis hubungan antara tinggi fluida (h) dan kecepatan aliran (v).</li>
+            <li>Melatih keterampilan pengukuran, pencatatan data, dan analisis grafik.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="kurikulum-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this, 'desain')">
+        <h3><span>Desain Eksperimen</span></h3>
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div id="desain" class="content">
+        <h3>Variabel</h3>
+        <ol type="a">
+            <li><strong>Variabel Bebas:</strong> Tinggi air dalam tangki (h).</li>
+            <li><strong>Variabel Terikat:</strong> Kecepatan aliran (v) dan jarak pancaran air (x).</li>
+            <li><strong>Variabel Kontrol:</strong> Diameter lubang, gravitasi, dan jenis fluida (air).</li>
+        </ol>
+        <h3>Alat dan Bahan</h3>
+         <ol type="a">
+            <li>Simulasi PhET <em>Fluid Pressure and Flow</em> (tab "Water Tower").</li>
+            <li>Penggaris virtual (dalam simulasi).</li>
+            <li>Stopwatch (opsional).</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="kurikulum-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this, 'pelaksanaan')">
+        <h3><span>Panduan Pelaksanaan</span></h3>
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div id="pelaksanaan" class="content">
+        <h3>Langkah Kerja:</h3>
+        <ol>
+            <li>Buka simulasi PhET Fluid Pressure and Flow dan pilih tab Water Tower.</li>
+            <li>Atur parameter:
+                <ol type="a">
+                    <li>Fluida: Air (ρ = 1000 kg/m³).</li>
+                    <li>Gravitasi: Bumi (g = 9,8 m/s²).</li>
+                </ol>
+            </li>
+            <li>Isi tangki hingga ketinggian tertentu (h) menggunakan faucet.</li>
+            <li>Buka lubang di dasar tangki dan ukur:
+                <ol type="a">
+                    <li>Jarak horizontal pancaran air (x) menggunakan penggaris virtual.</li>
+                    <li>Waktu tempuh air dari lubang ke titik jatuh (gunakan stopwatch atau fitur <em>pause</em>).</li>
+                </ol>
+            </li>
+            <li>Ulangi langkah 3-4 untuk 5 variasi berbeda (misal: 2 m, 4 m, 6 m, 8 m, 10 m).</li>
+        </ol>
+        <h3>Pencatatan Data:</h3>
+        <table class="scroll-wrapper">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Tinggi air (h) [m]</th>
+                    <th>Jarak pancaran (x) [m]</th>
+                    <th>Waktu tempuh (t) [s]</th>
+                    <th>Kecepatan teoritis v = √(2gh) [m/s]</th>
+                    <th>Kecepatan eksperimen v = x/t [m/s]</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table> 
+      </div>
+    </div>
+
+    <div class="kurikulum-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this, 'analisis')">
+        <h3><span>Analisis dan Interpretasi</span></h3>
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div id="analisis" class="content">
+        <h3>Analisis Grafik</h3>
+        <ol type="a">
+            <li>Buatlah grafik antara kecepatan eksperimen (v) dengan akar kuadrat dari ketinggian air (√h).</li>
+            <li>Bandingkan kemiringan grafik dengan nilai teoritis √(2g).</li>
+        </ol>
+        <h3>Pertanyaan Analitis</h3>
+        <ol type="a">
+            <li>Mengapa kecepatan eksperimen mungkin berbeda dari teoritis?</li>
+            <li>Bagaimana pengaruh diameter lubang terhadap kecepatan aliran? (Uji dengan mengubah diameter lubang).</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="kurikulum-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this, 'refleksi')">
+        <h3><span>Refleksi</span></h3>
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div id="refleksi" class="content">
+        <h3>Kesimpulan</h3>
+        <p>Tuliskan kesimpulan tentang validitas Hukum Torricelli berdasarkan data eksperimen.</p>
+        <h3>Aplikasi Nyata</h3>
+        <p>Jelaskan contoh penerapan Hukum Torricelli dalam sistem distribusi air atau hidrolik!</p>
+        <h3>Kendala dan Solusi</h3>
+        <p>Identifikasi kesulitan selama eksperimen dan cara mengatasinya.</p>
+      </div>
+    </div>
+  </section>
+  
   <section class="experiment-resources">
     <div class="container">
       <h2>Materi & Panduan</h2>
       <a href="materi-panduan-fluida-dinamis.pdf" class="resource-button" download>📄 Unduh Panduan PDF</a>
     </div>
   </section>
-
-  <section class="kurikulum-section">
-    <h2>Kurikulum Eksperimen Fluida Dinamis</h2>
-
-    <div class="kurikulum-item">
-      <button class="accordion-btn" onclick="toggleAccordion(this, 'orientasi')">
-        <span>Orientasi dan Tujuan</span>
-        <span class="arrow">&#9662;</span>
-      </button>
-      <div id="orientasi" class="content">
-        <p>Siswa diperkenalkan pada konteks aliran fluida pada tangki bocor menggunakan simulasi PhET. Tujuan dari kegiatan ini adalah agar siswa mampu:</p>
-        <ul>
-          <li>Mengamati hubungan antara tinggi fluida dan jarak pancar.</li>
-          <li>Menentukan pengaruh ketinggian terhadap kecepatan pancaran fluida.</li>
-          <li>Menjelaskan hukum Torricelli secara konseptual dan matematis.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="kurikulum-item">
-      <button class="accordion-btn" onclick="toggleAccordion(this, 'desain')">
-        <span>Desain Eksperimen</span>
-        <span class="arrow">&#9662;</span>
-      </button>
-      <div id="desain" class="content">
-        <p><strong>Variabel:</strong></p>
-        <ul>
-          <li>Manipulatif: tinggi permukaan air (h)</li>
-          <li>Respon: jarak horizontal pancaran air (x)</li>
-          <li>Kontrol: diameter lubang, jenis fluida</li>
-        </ul>
-        <p><strong>Rumus Teoritis (Torricelli):</strong></p>
-        <p><code>v = √(2gh)</code> → digunakan untuk mencari kecepatan pancaran fluida dari lubang.</p>
-        <p><strong>Alat & Bahan:</strong></p>
-        <ul>
-          <li>Simulasi PhET "Fluid Pressure and Flow"</li>
-          <li>Penggaris virtual, stopwatch (jika tersedia)</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="kurikulum-item">
-      <button class="accordion-btn" onclick="toggleAccordion(this, 'pelaksanaan')">
-        <span>Panduan Pelaksanaan</span>
-        <span class="arrow">&#9662;</span>
-      </button>
-      <div id="pelaksanaan" class="content">
-        <ol>
-          <li>Buka simulasi PhET, pilih tab Water Tower.</li>
-          <li>Aktifkan aliran fluida dan vektor kecepatan.</li>
-          <li>Atur tinggi fluida (misal: 1 m, 2 m, 3 m, 4 m, 5 m).</li>
-          <li>Ukur jarak pancar horizontal (x) dari titik keluar air ke tanah.</li>
-          <li>Catat data dalam tabel seperti berikut:</li>
-        </ol>
-        <table>
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>Tinggi Air (h) [m]</th>
-              <th>√h [√m]</th>
-              <th>Jarak Pancar (x) [m]</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>1</td><td>1</td><td>1.00</td><td>-</td></tr>
-            <tr><td>2</td><td>2</td><td>1.41</td><td>-</td></tr>
-            <tr><td>3</td><td>3</td><td>1.73</td><td>-</td></tr>
-            <tr><td>4</td><td>4</td><td>2.00</td><td>-</td></tr>
-            <tr><td>5</td><td>5</td><td>2.24</td><td>-</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="kurikulum-item">
-      <button class="accordion-btn" onclick="toggleAccordion(this, 'analisis')">
-        <span>Analisis dan Interpretasi</span>
-        <span class="arrow">&#9662;</span>
-      </button>
-      <div id="analisis" class="content">
-        <p>Analisis data dilakukan dengan membuat grafik antara √h dan x. Perhatikan apakah grafik tersebut linier.</p>
-        <ul>
-          <li>Apakah jarak pancar berbanding lurus dengan √h?</li>
-          <li>Apakah grafik menunjukkan kecocokan dengan teori Torricelli?</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="kurikulum-item">
-      <button class="accordion-btn" onclick="toggleAccordion(this, 'refleksi')">
-        <span>Refleksi</span>
-        <span class="arrow">&#9662;</span>
-      </button>
-      <div id="refleksi" class="content">
-        <p><strong>Refleksi:</strong></p>
-        <ul>
-          <li>Siswa menyimpulkan validitas hukum Torricelli dari data eksperimen.</li>
-          <li>Merefleksikan kesalahan dan keterbatasan selama eksperimen.</li>
-          <li>Diskusikan aplikasi nyata: desain pancuran, irigasi, dsb.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  
 
   <section class="experiment-video">
     <div class="container">
