@@ -12,7 +12,13 @@ body {
     margin: 0 auto;
     padding: 20px;
   }
-  
+  .formula {
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    text-align: center;
+    margin: 15px 0;
+  }
+ 
   /* Header styles */
   .experiment-header {
     background-color: #1e3a8a;
@@ -55,7 +61,7 @@ body {
 
   /* Curriculum section BARU */
   .kurikulum-section {
-    max-width: 800px;
+    max-width: 1400px;
     margin: auto;
     background-color: #ffffff;
     padding: 20px;
@@ -120,7 +126,6 @@ body {
   table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
   }
 
   table, th, td {
@@ -131,6 +136,13 @@ body {
     padding: 8px;
     text-align: center;
   }
+
+  th {
+  background-color: #3498db;
+  color: white;
+  font-weight: 500;
+  }
+
 
   /* Tambahan kecil */
   sup {
