@@ -22,35 +22,105 @@
     </div>
   </section>
 
-  <section class="curriculum-cards">
-    <div class="container">
-      <h2>Kurikulum Eksperimen</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Orientasi & Tujuan</h3>
-          <p>Tujuan eksperimen dan konsep dasar Teorema Toricelli.</p>
-          <a href="https://docs.google.com/document/d/12Pp5VX4GVpr75fRp_I_F7VRxhzFqWywSjbV51eVc86c/edit?usp=sharing" class="btn" target="_blank">Lihat Materi</a>
-        </div>
-        <div class="card">
-          <h3>Desain Eksperimen</h3>
-          <p>Setup eksperimen virtual dengan PhET: Fluid Pressure and Flow.</p>
-          <a href="https://docs.google.com/document/d/1yDxLCp5rxEUpdQ4sfVILIc18EFWMQve6FN8DW-EH7sc/edit?usp=sharing" class="btn" target="_blank">Lihat Materi</a>
-        </div>
-        <div class="card">
-          <h3>Pelaksanaan</h3>
-          <p>Panduan pelaksanaan eksperimen dan pencatatan data.</p>
-          <a href="https://docs.google.com/document/d/1kpFXTYQFRECjQh3jvaJfSJUkQFoaYWwiQCQ_Q1zqK1I/edit?usp=sharing" class="btn" target="_blank">Lihat Materi</a>
-        </div>
-        <div class="card">
-          <h3>Analisis Data</h3>
-          <p>Langkah analisis dan interpretasi hasil eksperimen.</p>
-          <a href="https://docs.google.com/document/d/1HJL1rFQGapinbGcewIV9pqZMzurhdduqxIOOUJSy7OY/edit?usp=sharing" class="btn" target="_blank">Lihat Materi</a>
-        </div>
-        <div class="card">
-          <h3>Refleksi</h3>
-          <p>Kesimpulan dan refleksi hasil eksperimen.</p>
-          <a href="https://docs.google.com/document/d/1pSrSG1Q4wpgx42oUkmZ8qvTHzXG5JznyGNZ-5dp1tvE/edit?usp=sharing" class="btn" target="_blank">Lihat Materi</a>
-        </div>
+  <section class="kurikulum-section">
+    <h2>Kurikulum Eksperimen Fluida Dinamis</h2>
+
+    <div class="kurikulum-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this, 'orientasi')">
+        <span>Orientasi dan Tujuan</span>
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div id="orientasi" class="content">
+        <p>Siswa diperkenalkan pada konteks aliran fluida pada tangki bocor menggunakan simulasi PhET. Tujuan dari kegiatan ini adalah agar siswa mampu:</p>
+        <ul>
+          <li>Mengamati hubungan antara tinggi fluida dan jarak pancar.</li>
+          <li>Menentukan pengaruh ketinggian terhadap kecepatan pancaran fluida.</li>
+          <li>Menjelaskan hukum Torricelli secara konseptual dan matematis.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kurikulum-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this, 'desain')">
+        <span>Desain Eksperimen</span>
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div id="desain" class="content">
+        <p><strong>Variabel:</strong></p>
+        <ul>
+          <li>Manipulatif: tinggi permukaan air (h)</li>
+          <li>Respon: jarak horizontal pancaran air (x)</li>
+          <li>Kontrol: diameter lubang, jenis fluida</li>
+        </ul>
+        <p><strong>Rumus Teoritis (Torricelli):</strong></p>
+        <p><code>v = √(2gh)</code> → digunakan untuk mencari kecepatan pancaran fluida dari lubang.</p>
+        <p><strong>Alat & Bahan:</strong></p>
+        <ul>
+          <li>Simulasi PhET "Fluid Pressure and Flow"</li>
+          <li>Penggaris virtual, stopwatch (jika tersedia)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kurikulum-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this, 'pelaksanaan')">
+        <span>Panduan Pelaksanaan</span>
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div id="pelaksanaan" class="content">
+        <ol>
+          <li>Buka simulasi PhET, pilih tab Water Tower.</li>
+          <li>Aktifkan aliran fluida dan vektor kecepatan.</li>
+          <li>Atur tinggi fluida (misal: 1 m, 2 m, 3 m, 4 m, 5 m).</li>
+          <li>Ukur jarak pancar horizontal (x) dari titik keluar air ke tanah.</li>
+          <li>Catat data dalam tabel seperti berikut:</li>
+        </ol>
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Tinggi Air (h) [m]</th>
+              <th>√h [√m]</th>
+              <th>Jarak Pancar (x) [m]</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>1</td><td>1.00</td><td>-</td></tr>
+            <tr><td>2</td><td>2</td><td>1.41</td><td>-</td></tr>
+            <tr><td>3</td><td>3</td><td>1.73</td><td>-</td></tr>
+            <tr><td>4</td><td>4</td><td>2.00</td><td>-</td></tr>
+            <tr><td>5</td><td>5</td><td>2.24</td><td>-</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="kurikulum-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this, 'analisis')">
+        <span>Analisis dan Interpretasi</span>
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div id="analisis" class="content">
+        <p>Analisis data dilakukan dengan membuat grafik antara √h dan x. Perhatikan apakah grafik tersebut linier.</p>
+        <ul>
+          <li>Apakah jarak pancar berbanding lurus dengan √h?</li>
+          <li>Apakah grafik menunjukkan kecocokan dengan teori Torricelli?</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kurikulum-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this, 'refleksi')">
+        <span>Refleksi</span>
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div id="refleksi" class="content">
+        <p><strong>Refleksi:</strong></p>
+        <ul>
+          <li>Siswa menyimpulkan validitas hukum Torricelli dari data eksperimen.</li>
+          <li>Merefleksikan kesalahan dan keterbatasan selama eksperimen.</li>
+          <li>Diskusikan aplikasi nyata: desain pancuran, irigasi, dsb.</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -66,10 +136,24 @@
     </div>
   </section>
   
-  
   <section class="nav-fixed">
   <a href="index.html#eksperimen" class="btn-kembali">Kembali ke Daftar Eksperimen</a>
   </section>
 
+  <script>
+  function toggleAccordion(button, id) {
+    const allButtons = document.querySelectorAll('.accordion-btn');
+    const allContents = document.querySelectorAll('.content');
+
+    allButtons.forEach(btn => btn.classList.remove('active'));
+    allContents.forEach(c => c.classList.remove('open'));
+
+    const content = document.getElementById(id);
+    if (!content.classList.contains('open')) {
+      button.classList.add('active');
+      content.classList.add('open');
+    }
+  }
+  </script>
 </body>
 </html>
